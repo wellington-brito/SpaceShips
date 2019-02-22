@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">SpaceShips</string>
+    <!-- Caso não haja conexão -->
+    <string name="TituloSemConexão">No Connection!</string>
+    <string name="MensagemSemConexão">Please, connect your device to the internet</string>
+
+    <string name="textView_title_list">SpaceShips of STARWARS</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <string name="TituloEspera">Converting</string>
+    <string name="MensagemEspera">Converting the desired value</string>
+</resources>
