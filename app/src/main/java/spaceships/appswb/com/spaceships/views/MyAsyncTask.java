@@ -5,15 +5,14 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.support.annotation.NonNull;
-import android.support.v7.app.AlertDialog;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.widget.ListView;
-import android.widget.TextView;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import spaceships.appswb.com.spaceships.R;
-import spaceships.appswb.com.spaceships.adapter.ShipAdapter;
+import spaceships.appswb.com.spaceships.adapter.RecyclerAdapter;
 import spaceships.appswb.com.spaceships.entity.Ship;
 
 import java.io.BufferedReader;
@@ -32,10 +31,11 @@ public class MyAsyncTask extends AsyncTask<String, String, String> {
     //Declarando variaveis.
     ProgressDialog progessDialo;
     Context context;
-    List<Ship> ships = new ArrayList<>();
+    List<Ship> spaceships = new ArrayList<>();
     ListView mListShips;
-    Float resultado;
-    String criptocoinChoosed;
+    private RecyclerView recyclerView;
+    private RecyclerAdapter recyclerAdapter;
+    String valorparaconverter;
 
     //Construtor da classe.
     public MyAsyncTask(Context context, ListView mList) {
@@ -43,6 +43,14 @@ public class MyAsyncTask extends AsyncTask<String, String, String> {
         this.mListShips = mList;
 
     }
+
+
+    public MyAsyncTask(Home home, RecyclerView recyclerView, RecyclerAdapter recyclerAdapter) {
+        this.context = home;
+        this.recyclerView = recyclerView;
+        this.recyclerAdapter = recyclerAdapter;
+    }
+
 
     //Responsavel por carregar o Objeto JSON
     public static String getJSONFromAPI(String url) {
@@ -107,12 +115,14 @@ public class MyAsyncTask extends AsyncTask<String, String, String> {
     @Override
     protected String doInBackground(String... strings) {
         try {
+
             //Atribui o valor de params na posição 0(neste caso o valor a ser computado) a valorparaconverter.
-            //this.valorparaconverter = strings[0];
+            this.valorparaconverter = strings[0];
 
             //Chama o método para conectar com a API
             //Passa como parametro a URL da API em formato String
-            return this.getJSONFromAPI(strings[0]);
+            //return this.getJSONFromAPI("https://swapi.co/api/starships/9/?format=json");
+            return this.getJSONFromAPI("https://swapi.co/api/starships/");
         } catch (Exception e) {
 
             String erro = e.getMessage();
@@ -123,16 +133,13 @@ public class MyAsyncTask extends AsyncTask<String, String, String> {
 
     @Override
     protected void onPostExecute(String result) {
-        JSONArray json = null;
-        JSONObject mJsonObject = new JSONObject();
-
-
         try {
-            JSONArray jsonArray = mJsonObject.getJSONArray("results");
+            JSONObject mJsonObject = new JSONObject(result);
 
-            for (int i = 0; i < jsonArray.length(); i++) {
+            JSONArray json = mJsonObject.getJSONArray("results");
 
-                JSONObject explrObject = jsonArray.getJSONObject(i);
+            for (int i = 0; i < json.length(); i++) {
+                mJsonObject = (JSONObject) json.get(i);
                 Ship spaceship = new Ship();
                 // spaceship.setId(Integer.parseInt(mJsonObject.getString("id")));
                 spaceship.setName(mJsonObject.getString("name"));
@@ -144,7 +151,7 @@ public class MyAsyncTask extends AsyncTask<String, String, String> {
                 spaceship.setCargo_capacity(mJsonObject.getString("cargo_capacity"));
                 spaceship.setConsumables(mJsonObject.getString("consumables"));
 
-                this.ships.add(spaceship);
+                this.spaceships.add(spaceship);
             }
         } catch (JSONException e) {
             e.printStackTrace();
@@ -163,7 +170,14 @@ public class MyAsyncTask extends AsyncTask<String, String, String> {
     public void exibirDados() throws Exception {
 
         // Associacao do Adapter a ListView
-        this.mListShips.setAdapter(new ShipAdapter(context, this.ships));
+        //this.mListShips.setAdapter(new ShipAdapter(context, this.spaceships));
+
+
+        recyclerView.setLayoutManager(new LinearLayoutManager(context));
+        recyclerAdapter = new RecyclerAdapter(spaceships);
+        recyclerView.setAdapter(recyclerAdapter);
+
+
 
     }
 }

@@ -3,7 +3,6 @@ package spaceships.appswb.com.spaceships.entity;
 public class Ship {
 
     private String name;
-
     private String model;
     private String cost_in_credits;
     private String length;
