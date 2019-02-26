@@ -7,8 +7,6 @@
         android:layout_height="match_parent"
         tools:context=".views.Details">
 
-
-    <!--  CardsViews__________________________________ -->
     <android.support.v7.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -19,9 +17,7 @@
             app:cardElevation="20dp"
             app:cardCornerRadius="5dp"
             android:id="@+id/cardView1"
-
             app:cardBackgroundColor="@color/cardview_light_background">
-
 
         <LinearLayout
                 android:id="@+id/layoutdados"
@@ -54,30 +50,35 @@
                         android:layout_marginTop="5dp"
                         android:text="@string/cost"
                         android:textStyle="bold"/>
+
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
                         android:text="@string/lenght"
                         android:textStyle="bold"/>
+
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
                         android:text="@string/crew"
                         android:textStyle="bold"/>
+
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
                         android:text="@string/passengers"
                         android:textStyle="bold"/>
+
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
                         android:text="@string/cargo_capacity"
                         android:textStyle="bold"/>
+
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -128,6 +129,7 @@
                         android:layout_marginTop="5dp"
                         android:text=""
                         android:textStyle="bold"/>
+
                 <TextView
                         android:id="@+id/textViewValorCrew"
                         android:layout_width="match_parent"
@@ -135,6 +137,7 @@
                         android:layout_marginTop="5dp"
                         android:text=""
                         android:textStyle="bold"/>
+
                 <TextView
                         android:id="@+id/textViewValorPassangers"
                         android:layout_width="match_parent"
@@ -142,6 +145,7 @@
                         android:layout_marginTop="5dp"
                         android:text=""
                         android:textStyle="bold"/>
+
                 <TextView
                         android:id="@+id/textViewValorCargo_capacity"
                         android:layout_width="match_parent"
@@ -149,6 +153,7 @@
                         android:layout_marginTop="5dp"
                         android:text=""
                         android:textStyle="bold"/>
+
                 <TextView
                         android:id="@+id/textViewValorConsumables"
                         android:layout_width="match_parent"

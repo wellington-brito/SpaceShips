@@ -31,6 +31,11 @@ public class Details extends AppCompatActivity {
         final Ship ship = (Ship) getIntent().getSerializableExtra("ship");
         getSupportActionBar().setTitle(ship.getName());
 
+        setAtributes(ship);
+        updateShip(ship);
+    }
+
+    private void setAtributes(Ship ship){
         this.textViewValorSapaceShipName = (TextView) findViewById(R.id.textViewValorSapaceShipName);
         textViewValorSapaceShipName.setText(ship.getName());
 
@@ -55,8 +60,6 @@ public class Details extends AppCompatActivity {
         this.textViewValorStarship_class = (TextView) findViewById(R.id.textViewValorStarship_class);
         textViewValorStarship_class.setText(ship.getStarship_class());
 
-        updateShip(ship);
-
     }
 
     private void updateShip(Ship ship) {
@@ -65,7 +68,7 @@ public class Details extends AppCompatActivity {
         shipCorrente.setId(ship.getId());
         shipCorrente.setName(ship.getName());
         shipCorrente.setModel(ship.getModel());
-        shipCorrente.setCost_in_credits(ship.getCost_in_credits());;
+        shipCorrente.setCost_in_credits(ship.getCost_in_credits());
         shipCorrente.setLength(ship.getLength());
         shipCorrente.setCrew(ship.getCrew());
         shipCorrente.setPassengers(ship.getPassengers());

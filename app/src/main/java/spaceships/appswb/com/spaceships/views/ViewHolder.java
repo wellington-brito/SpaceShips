@@ -20,6 +20,5 @@ public class ViewHolder extends RecyclerView.ViewHolder {
         this.textViewPrice = itemView.findViewById(R.id.textViewValorPrice);
         this.imgBtn = itemView.findViewById(R.id.img_see);
         this.textView = itemView.findViewById(R.id.textViewSeee);
-
     }
 }

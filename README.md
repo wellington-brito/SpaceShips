@@ -1,7 +1,7 @@
 ## SpaceShips
 
 ### **Oque você fez**
-> _Implementei uma aplicação para acessar a api SWAPI apenas na primeira execução.
+> _Implementei uma aplicação para acessar a api SWAPI apenas na primeira execução._
 >
 > _Na sequência os dados, nesse caso, detalhes das Naves, são armazenados localmente permitindo visualização off-line._
 >

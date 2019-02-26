@@ -50,25 +50,4 @@ public class ShipBO {
         return updateBuilder;
     }
 
-//    private static List<Ship> getShipsVisualized()  throws SQLException {
-//        DatabaseHelper dh = new DatabaseHelper(Context context);
-//        ShipDAO shipDAO = new ShipDAO(dh.getConnectionSource());
-//        try {
-//            QueryBuilder<Ship, Integer> queryBuilder = shipDAO.queryBuilder();
-//            queryBuilder.where().eq("dataAlteracao", null);
-//            List<MyFacePhoto> facePhotos = facePhotoQb.query();
-//            List<Long> photoIds = new ArrayList<>();
-//            for (MyFacePhoto fp : facePhotos) {
-//                photoIds.add(fp.photoId);
-//            }
-//
-//            return photoIds;
-//        } catch (Exception e) {
-//            Log.w(TAG, e.getMessage());
-//            return null;
-//        }
-//    }
-
-
-
 }

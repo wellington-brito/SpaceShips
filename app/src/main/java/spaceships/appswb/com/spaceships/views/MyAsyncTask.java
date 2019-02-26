@@ -37,23 +37,19 @@ import java.util.List;
 
 public class MyAsyncTask extends AsyncTask<String, String, String> {
 
-
     ProgressDialog progessDialo;
     Context context;
     List<Ship> spaceships = new ArrayList<>();
     ListView mListShips;
-    String valorparaconverter;
     AppCompatImageButton imgBtn;
     AppCompatTextView textView;
     private RecyclerView recyclerView;
     private RecyclerAdapter recyclerAdapter;
 
-
     public MyAsyncTask(Context context, ListView mList) {
         this.context = context;
         this.mListShips = mList;
     }
-
 
     public MyAsyncTask(Home home, RecyclerView recyclerView, RecyclerAdapter recyclerAdapter, AppCompatImageButton imgBtn, AppCompatTextView textView) {
         this.context = home;
@@ -62,7 +58,6 @@ public class MyAsyncTask extends AsyncTask<String, String, String> {
         this.imgBtn = imgBtn;
         this.textView = textView;
     }
-
 
     //Responsavel por carregar o Objeto JSON
     public static String getJSONFromAPI(String url) {
@@ -114,7 +109,6 @@ public class MyAsyncTask extends AsyncTask<String, String, String> {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
         return buffer.toString();
     }
 
@@ -137,28 +131,27 @@ public class MyAsyncTask extends AsyncTask<String, String, String> {
     @Override
     protected void onPostExecute(String result) {
         try {
-                JSONObject mJsonObject = new JSONObject(result);
-                JSONArray json = mJsonObject.getJSONArray("results");
-                for (int i = 0; i < json.length(); i++) {
-                    mJsonObject = (JSONObject) json.get(i);
-                    Ship spaceship = new Ship();
-                    spaceship.setName(mJsonObject.getString("name"));
-                    spaceship.setModel(mJsonObject.getString("model"));
-                    spaceship.setCost_in_credits(mJsonObject.getString("cost_in_credits"));
-                    spaceship.setLength(mJsonObject.getString("length"));
-                    spaceship.setCrew(mJsonObject.getString("crew"));
-                    spaceship.setPassengers(mJsonObject.getString("passengers"));
-                    spaceship.setCargo_capacity(mJsonObject.getString("cargo_capacity"));
-                    spaceship.setConsumables(mJsonObject.getString("consumables"));
-                    this.spaceships.add(spaceship);
-                }
-
-                if (verifyDatabse() == true) {
-                    this.salvarDados();
-                    this.exibirDados();
-                } else {
-                    this.exibirDados();
-                }
+            JSONObject mJsonObject = new JSONObject(result);
+            JSONArray json = mJsonObject.getJSONArray("results");
+            for (int i = 0; i < json.length(); i++) {
+                mJsonObject = (JSONObject) json.get(i);
+                Ship spaceship = new Ship();
+                spaceship.setName(mJsonObject.getString("name"));
+                spaceship.setModel(mJsonObject.getString("model"));
+                spaceship.setCost_in_credits(mJsonObject.getString("cost_in_credits"));
+                spaceship.setLength(mJsonObject.getString("length"));
+                spaceship.setCrew(mJsonObject.getString("crew"));
+                spaceship.setPassengers(mJsonObject.getString("passengers"));
+                spaceship.setCargo_capacity(mJsonObject.getString("cargo_capacity"));
+                spaceship.setConsumables(mJsonObject.getString("consumables"));
+                this.spaceships.add(spaceship);
+            }
+            if (verifyDatabse() == true) {
+                this.salvarDados();
+                this.exibirDados();
+            } else {
+                this.exibirDados();
+            }
 
         } catch (JSONException e) {
             e.printStackTrace();
@@ -194,16 +187,13 @@ public class MyAsyncTask extends AsyncTask<String, String, String> {
 
     @SuppressLint("ResourceType")
     public void exibirDados() throws Exception {
-        // Associacao do recyclerAdapter ao recyclerView
         recyclerView.setLayoutManager(new LinearLayoutManager(context));
         recyclerAdapter = new RecyclerAdapter(spaceships);
         recyclerView.setAdapter(recyclerAdapter);
-
-      clickItem();
+        clickItem();
     }
 
     private void clickItem() {
-
         ItemClickSupport.addTo(this.recyclerView)
                 .setOnItemClickListener(new ItemClickSupport.OnItemClickListener() {
                     @Override

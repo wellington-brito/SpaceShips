@@ -13,19 +13,14 @@ import spaceships.appswb.com.spaceships.entity.Ship;
 
 public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
 
-    // nomeGrupoMuscular do database para sua aplicacao
     private static final String DATABASE_NAME = "bd_starships";
 
-    // sempre que voce mudar objetos em seu database incremente a versao
+
     private static final int DATABASE_VERSION = 1;
 
     public DatabaseHelper(Context context, String databaseName, SQLiteDatabase.CursorFactory factory, int databaseVersion) {
         super(context, databaseName, factory, databaseVersion);
     }
-
-//    // the DAO utilizado para acessar os dados
-//    private Dao<GrupoMuscular, Integer> grupoMuscularDao = null;
-//    private Dao<Exercicio, Integer> exercicioDao = null;
 
     public DatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -73,8 +68,6 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
         public void close() {
             super.close();
         }
-
-
 
     private void updateFromVersion1(SQLiteDatabase database, ConnectionSource connectionSource, int oldVersion, int newVersion) {
         // do some stuff here

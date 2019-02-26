@@ -8,7 +8,6 @@
         app:cardCornerRadius="4dp"
         app:cardElevation="8dp">
 
-
     <LinearLayout
             android:id="@+id/layoutdados"
             android:layout_width="match_parent"
@@ -52,7 +51,6 @@
                         android:layout_height="wrap_content"
                         android:textAlignment="center"
                         android:src="@drawable/baseline_visibility_black_18dp"/>
-
             </LinearLayout>
 
         </LinearLayout>
@@ -116,6 +114,5 @@
         </LinearLayout>
 
     </LinearLayout>
-
 
 </android.support.v7.widget.CardView>

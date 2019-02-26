@@ -2,10 +2,6 @@ package spaceships.appswb.com.spaceships.dao;
 
 import android.content.Context;
 
-/**
- * Created by Were on 05/04/2017.
- */
-
 public class DatabaseManager {
     private static DatabaseManager instance;
     private DatabaseHelper helper;

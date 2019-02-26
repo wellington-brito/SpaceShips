@@ -1,4 +1,4 @@
-package spaceships.appswb.com.spaceships.adapter;
+package spaceships.appswb.com.spaceships.old.files;
 
 import android.content.Context;
 import android.view.LayoutInflater;

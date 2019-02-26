@@ -12,5 +12,4 @@ public class ShipDAO extends BaseDaoImpl<Ship, Integer> {
         setConnectionSource(connectionSource);
         initialize();
     }
-
 }
