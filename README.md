@@ -1,6 +1,6 @@
 ## SpaceShips
 
-###**que você fez**
+### **que você fez**
  _Implementei uma aplicação para acessar a api SWAPI apenas na primeira execução.
  _Na sequência os dados nesse caso detalhes das Naves, são armazenados localmente permitindo visualização off-line._
  _Indicação visual de que os dados de uma das Naves foi visualizada pelo usuário sempre que ele retornar à lista._
@@ -16,6 +16,6 @@
 
  _O mesmo se aplica ao uso do Retrofit em relação à manipulação dos dados da api._
 
-###**Por que você fez**
+### **Por que você fez**
 _Desenvolvi a aplicação dessa forma para que pudesse entregar um projeto funcional, e, considerando cenários e situações semelhantes,
 realizar melhorias._
