@@ -2,11 +2,23 @@
     <string name="app_name">SpaceShips</string>
     <!-- Caso não haja conexão -->
     <string name="TituloSemConexão">No Connection!</string>
-    <string name="MensagemSemConexão">Please, connect your device to the internet</string>
+    <string name="MensagemSemConexão">Você irá visualizar dados armazenados localmente!</string>
 
     <string name="textView_title_list">SpaceShips of STARWARS</string>
     <string name="title_activity_main">MainActivity</string>
 
-    <string name="TituloEspera">Converting</string>
-    <string name="MensagemEspera">Converting the desired value</string>
+    <string name="TituloEspera">Launch Starships</string>
+    <string name="MensagemEspera">Wait...</string>
+    <string name="cost">Cost in Credits</string>
+    <string name="lenght">Lenght</string>
+    <string name="crew">Crew</string>
+    <string name="passengers">Passengers</string>
+    <string name="cargo_capacity">Cargo Capacity</string>
+    <string name="consumables">Consumables</string>
+    <string name="starship_class">Starship Class</string>
+    <string name="Shipname">SpaceShip</string>
+    <string name="btn_see">Visualizadas</string>
+    <string name="btn_datalocal">Localmente</string>
+    <string name="btn_api">Ver da api</string>
+    <string name="textView_Cost">Custo total</string>
 </resources>

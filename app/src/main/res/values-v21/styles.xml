@@ -1,3 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Base application theme. -->
+    <style name="SuperMaterialTheme" parent="AppTheme">
+        <item name="android:navigationBarColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="RaisedButton" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:backgroundTint">@color/colorAccent</item>
+    </style>
 </resources>

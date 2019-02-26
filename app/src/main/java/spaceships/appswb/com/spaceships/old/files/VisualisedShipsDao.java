@@ -1,10 +1,10 @@
-package spaceships.appswb.com.spaceships.dao;
-
+package spaceships.appswb.com.spaceships.old.files;
+/*
 import android.arch.persistence.room.Dao;
 import android.arch.persistence.room.Insert;
 import android.arch.persistence.room.Query;
 import spaceships.appswb.com.spaceships.entity.Ship;
-import spaceships.appswb.com.spaceships.entity.VisualisedShips;
+
 
 import java.util.List;
 
@@ -19,3 +19,4 @@ public interface VisualisedShipsDao {
     @Query("SELECT * from visualised_ships_table")
     List<Ship> getAllVisualisedShips();
 }
+*/

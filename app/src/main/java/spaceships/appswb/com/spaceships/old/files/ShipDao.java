@@ -1,5 +1,5 @@
-package spaceships.appswb.com.spaceships.dao;
-
+package spaceships.appswb.com.spaceships.old.files;
+/*
 import android.arch.lifecycle.LiveData;
 import android.arch.persistence.room.Dao;
 import android.arch.persistence.room.Insert;
@@ -11,7 +11,7 @@ import java.util.List;
 @Dao
 public interface ShipDao {
 
-    @Insert
+   /* @Insert
     void insert(Ship ship);
 
     @Query("DELETE FROM ships_table")
@@ -20,3 +20,4 @@ public interface ShipDao {
     @Query("SELECT * from ships_table")
     LiveData<List<Ship>> getAllShips();
 }
+*/

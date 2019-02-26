@@ -1,5 +1,5 @@
-package spaceships.appswb.com.spaceships.dao;
-
+package spaceships.appswb.com.spaceships.old.files;
+/*
 import android.arch.persistence.db.SupportSQLiteDatabase;
 import android.arch.persistence.room.Database;
 import android.arch.persistence.room.Room;
@@ -57,3 +57,4 @@ public abstract class ShipsRoomDatabase extends android.arch.persistence.room.Ro
         }
     }
 }
+*/

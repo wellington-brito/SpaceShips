@@ -1,10 +1,11 @@
-package spaceships.appswb.com.spaceships.entity;
-
+package spaceships.appswb.com.spaceships.old.files;
+/*
 import android.arch.persistence.room.ColumnInfo;
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.ForeignKey;
 import android.arch.persistence.room.PrimaryKey;
 import android.support.annotation.NonNull;
+import spaceships.appswb.com.spaceships.entity.Ship;
 
 import java.sql.Timestamp;
 
@@ -12,7 +13,7 @@ import java.sql.Timestamp;
         foreignKeys = @ForeignKey(entity = Ship.class,
         parentColumns = "id",
         childColumns = "id_ship"))
-public class VisualisedShips  implements Serializable, Parcelable {
+public class VisualisedShips {
 
     @PrimaryKey
     @NonNull
@@ -41,3 +42,4 @@ public class VisualisedShips  implements Serializable, Parcelable {
         this.id_ship = id_ship;
     }
 }
+*/

@@ -1,5 +1,5 @@
-package spaceships.appswb.com.spaceships.repositories;
-
+package spaceships.appswb.com.spaceships.old.files;
+/*
 import android.app.Application;
 import android.arch.lifecycle.LiveData;
 import android.os.AsyncTask;
@@ -43,3 +43,4 @@ public class ShipsRepository {
         }
     }
 }
+*/

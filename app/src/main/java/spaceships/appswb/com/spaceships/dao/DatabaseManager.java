@@ -1,4 +1,4 @@
-package apps4you.academytraining2.persistencia;
+package spaceships.appswb.com.spaceships.dao;
 
 import android.content.Context;
 

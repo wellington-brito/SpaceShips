@@ -27,6 +27,10 @@ public class RecyclerAdapter extends RecyclerView.Adapter<ViewHolder> {
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, int i) {
         Ship ship = list.get(i);
+        if (ship.getDataAlteracao() != null){
+            viewHolder.imgBtn.setBackgroundResource(R.drawable.baseline_visibility_black_18dp);
+            viewHolder.textView.setText("Visto");
+        }
         viewHolder.textViewName.setText(ship.getName());
         viewHolder.textViewPrice.setText(ship.getCost_in_credits());
     }

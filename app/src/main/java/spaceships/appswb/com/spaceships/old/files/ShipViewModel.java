@@ -1,5 +1,5 @@
-package spaceships.appswb.com.spaceships.models;
-
+package spaceships.appswb.com.spaceships.old.files;
+/*
 import android.app.Application;
 import android.arch.lifecycle.AndroidViewModel;
 import android.arch.lifecycle.LiveData;
@@ -26,3 +26,4 @@ public class ShipViewModel extends AndroidViewModel {
         mRepository.insert(ship);
     }
 }
+*/
